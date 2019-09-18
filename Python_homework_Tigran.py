@@ -3,6 +3,7 @@ first_text = "Hello, lets do some calculation, I can show you an intersting fact
 name_quest = "What if we get to know each other at first, tell me your name "
 
 #actions
+import datetime
 print(first_text)
 answer_first = input(name_quest)
 answer_name = "I'm really glad that we've met, " + answer_first
@@ -18,7 +19,6 @@ birth_year = 2019 - int(date_birth_year)
 print("Hmm " + weight_quest + " at " + str(birth_year) + "..., let me think")
 input("Ok I've finished, if you want to see the result, please push Enter bottom")
 index_bmi = weight_int/(height_float/100)**2
-import datetime
 date_of_act = datetime.datetime.now()
 print("So, " + answer_first + " in " + str(date_of_act)  + ", your body mass index (BMI) is -> " + str(index_bmi))
 input("There are 6 stages of BMI, push Enter and find your result bellow")
