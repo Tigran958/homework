@@ -1,31 +1,81 @@
-# variables
-first_text = "Hello, lets do some calculation, I can show you an intersting fact"
-name_quest = "What if we get to know each other at first, tell me your name "
+# Variables
+fridge_item_type = "vegetables"
+fridge_item_type_2 = "fruits"
+fridge_items = "vegetables,fruits"
+firdge_juce = "juce"
+electricity = "on"
+first_print = "Is it true, that I should empty the fridge? "
+market_print = "Should I go to the market for some juce?"
+p_break = " "
+text_first = "We have no electricity, and there are vegetables in the fridge, but no juce. So "
+# Actions
+check_fridge = str(electricity in "on" and fridge_items != "")
+check_if_fridge = check_fridge == "True" and (fridge_item_type_2 == "fruits" or fridge_item_type == "vegetables")
+check_if_items = str(check_fridge == "True" and firdge_juce not in fridge_items)
 
-#actions
-import datetime
-print(first_text)
-answer_first = input(name_quest)
-answer_name = "I'm really glad that we've met, " + answer_first
-print(answer_name)
-print("I can show you, how much your weight shuld be at the given height ")
-height_quest = input("So tell me, how toll are you in cm-s? ")
-height_float = float(height_quest)
-print(height_quest + " cm" + " is a good height!")
-weight_quest = input(" What about your weight and birth year, first how much do you weight in kilos? ")
-weight_int = int(weight_quest)
-date_birth_year = input("and the birth year? ")
-birth_year = 2019 - int(date_birth_year)
-print("Hmm " + weight_quest + " at " + str(birth_year) + "..., let me think")
-input("Ok I've finished, if you want to see the result, please push Enter bottom")
-index_bmi = weight_int/(height_float/100)**2
-date_of_act = datetime.datetime.now()
-print("So, " + answer_first + " in " + str(date_of_act)  + ", your body mass index (BMI) is -> " + str(index_bmi))
-input("There are 6 stages of BMI, push Enter and find your result bellow")
-print("	1. less than 18.5 -> Body mass deficit")
-print("	2. 18.5-24.9      -> Normal body mass")
-print("	3. 25.0-29.9      -> Excessive body mass")
-print("	4. 30.0-34.9      -> Obesity 1st degree")
-print("	5. 35.0-39.9      -> Obesity 2nd degree")
-print("	6. 40 and more    -> Obesity 3rd degree")
-print("Hope you liked it")
+print(text_first)
+print(first_print + p_break + str(check_if_fridge))
+print(market_print + p_break + check_if_items)
+
+input(p_break)
+###########Second one###########
+
+# Variables
+txt_1 = "Hello"
+first_print = "Let's order somthing to eat, for example qyabab "
+first_quest = "what kind of bread would you like? (lavash/boqon) "
+second_quest = "what kind of meat would you like? (chicken/beef) "
+third_quest = "ketchup/nothing ? "
+amount = "How many do you want? "
+bread = "lavash"
+bread_2 = "boqon"
+meat = "chicken"
+meat_2 = "beef"
+additional = "ketchup"
+additional_2 = "nothing"
+pb = " "
+price_amount = "You should pay: "
+input(txt_1)
+print(first_print)
+
+# Input values
+order_answer_first = input(first_quest)
+order_answer_second = input(second_quest)
+order_answer_third = input(third_quest)
+order_amout = input(amount)
+int_amount = int(order_amout)
+
+# Amounts
+price_lavash_chicken_ketchup = 1100 * int_amount
+price_lavash_beef_ketchup = 1200 * int_amount
+price_boqon_chicken_ketchup = 1300 * int_amount
+price_boqon_beef_ketchup = 1400 * int_amount
+price_lavash_chicken_nothing = 1000 * int_amount
+price_lavash_beef_nothing = 1100 * int_amount
+price_boqon_chicken_nothing = 1200 * int_amount
+price_boqon_beef_nothing = 1300 * int_amount
+
+# Checkings
+lck_or_lbn = ((order_answer_first == bread) and (order_answer_second == meat) and (order_answer_third == additional)) or ((order_answer_first == bread) and (order_answer_second == meat_2) and (order_answer_third == additional_2))
+lbk_or_bcn = ((order_answer_first == bread) and (order_answer_second == meat_2) and (order_answer_third == additional)) or ((order_answer_first == bread_2) and (order_answer_second == meat) and (order_answer_third == additional_2))
+bck_or_bbn = ((order_answer_first == bread_2) and (order_answer_second == meat) and (order_answer_third == additional)) or ((order_answer_first == bread_2) and (order_answer_second == meat_2) and (order_answer_third == additional_2))
+bbk = (order_answer_first == bread_2) and (order_answer_second == meat_2) and (order_answer_third == additional)
+#lcn = not bbk 
+lcn = (order_answer_first == bread) and (order_answer_second == meat) and (order_answer_third == additional_2)
+
+# Action
+print("You've ordered " + order_amout + pb + order_answer_second + pb + "qyabab with " + order_answer_third + pb + "in " + order_answer_first)
+print(price_amount + str())
+print(str(price_lavash_chicken_ketchup) + pb + str(lck_or_lbn))
+print(str(price_lavash_beef_ketchup) + pb + str(lbk_or_bcn))
+print(str(price_boqon_chicken_ketchup) + pb + str(bck_or_bbn))
+print(str(price_boqon_beef_ketchup) + pb + str(bbk))
+print(str(price_lavash_chicken_nothing) + pb + str(lcn))
+
+
+
+
+
+
+
+
