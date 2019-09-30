@@ -1,38 +1,30 @@
-###########1############
+def add_to_numbers(num1,num2):
+	return int(num1) + int(num2)
 
-number_q = input("Enter a number to see the multiplication table: ")
-number_input = int(number_q)
-range_number = range(0,11)
+first_number = input("first enter ")
+second_number = input("second enter ")
 
-for i in range_number:
-	print(number_q + "*" + str(i) + "=", number_input * i)
+print(add_to_numbers(first_number,second_number))
 
-###########2############
-print("")
-number_1 = input("Enter a number and se the count of digits: ")
-print(len(number_1))
+def print_hello_world():
+	print("Hello world")
 
-############3###########
+print_hello_world()
 
-star = "*"
-a_range = range(1,15)
-count = 0 
-first_count = 1
-second_count = 4
 
-print("Here we go for third task ")
-print("")
+def call_function(func):
+	if func > 0:
+		return "it's hot"
+	else:
+		return "it's cold"
 
-for j in a_range:
-	if count <= 4:
-		print(first_count * star)
-		count += 1
-		first_count += 1
+first_input = int(input("temperature ? "))
+print(call_function(first_input))
 
-	elif count > 4:
-		print(second_count * star)
-		second_count -= 1
-		if second_count == 0:
-			break
-	 
+def check_num(number):
+	if number % 2 == 0:
+		return "even"
+	return "odd"
 
+our_number = input("enter a number ")
+print(check_num(int(our_number)))
