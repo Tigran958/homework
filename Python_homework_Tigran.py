@@ -1,38 +1,66 @@
-###########1############
+##########1##########
 
-number_q = input("Enter a number to see the multiplication table: ")
-number_input = int(number_q)
-range_number = range(0,11)
+def max_number(num1, num2, num3):
+	if num1 > num2:
+		if  num2 >= num3:
+			return num1
+		elif num2 < num3 and num3 < num1:
+			return num1
+		elif num2 < num3 and num3 == num1:
+			return num1
+		return num3
 
-for i in range_number:
-	print(number_q + "*" + str(i) + "=", number_input * i)
+	elif num1 == num2:
+		if num2 > num3:
+			return num1
+		elif num2 == num3:
+			return "Numbers are equal."
+		return num3	
 
-###########2############
+	elif num1 < num2:
+		if num2 > num3:
+			return num2
+		elif num2 < num3:
+			return num3
+		return	num2
+
+print("Tell me three numbers and see wich is the bigist!")
+first_input = float(input("Enter first number: "))
+second_input = float(input("Enter second number: "))
+third_input = float(input("Enter third number: "))
+print("The bigist number is: ", max_number(first_input,second_input,third_input))
+
+#############2#############
+print('')
 print("")
-number_1 = input("Enter a number and se the count of digits: ")
-print(len(number_1))
+def fizz_buzz(number):
+	if number % 3 == 0:
+		if number % 5 == 0:
+			return "FizzBuzz!"
+		return "Fizz!"
 
-############3###########
+	elif number % 5 == 0:
+		if number % 3 == 0:
+			return "FizzBuzz!"
+		return "Buzz!"
+	
+	return number	
 
-star = "*"
-a_range = range(1,15)
-count = 0 
-first_count = 1
-second_count = 4
+print("Let's see, whether the number is Fizzable or Buzzable or both.")
+number_input = float(input("FizzBuzz_Number: "))
+print(fizz_buzz(number_input))
 
-print("Here we go for third task ")
+#########3#########
 print("")
+print("")
+print("See the type of numbers in a given range")			
+range_input = int(input("Enter the end of your range ")) + 1
 
-for j in a_range:
-	if count <= 4:
-		print(first_count * star)
-		count += 1
-		first_count += 1
-
-	elif count > 4:
-		print(second_count * star)
-		second_count -= 1
-		if second_count == 0:
-			break
-	 
+def showNumbers(limit):
+	for i in range(0,limit):
+		if i % 2 == 0:
+			print(str(i) + " EVEN")
+		elif i % 2 != 0:	
+			print(str(i) + " ODD")
+showNumbers(range_input)				
 
