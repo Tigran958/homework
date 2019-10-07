@@ -31,7 +31,7 @@ print(a is b)
 # 	if ord(i) == ord_var:
 # 		count +=1
 # print(count)
-
+'''
 some_1 = "1234567"
 print(some_1[0])
 print(some_1[0:3])
@@ -47,3 +47,12 @@ print(my_string.lower())
 print(my_string.upper())
 print(my_string.title())
 print(my_string.replace("MY","Your").capitalize())
+'''
+def get_middle_three_chars(sample_str):
+	middle_index = int(len(sample_str)/2)
+	print("Original string is", sample_str)
+	middle_three = sample_str[middle_index-1:middle_index+2]
+	print("Middle three chars are", middle_three)
+
+get_middle_three_chars("JhonDipPeta")
+get_middle_three_chars("Jasonayh")
