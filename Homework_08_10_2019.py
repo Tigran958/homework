@@ -1,11 +1,3 @@
-'''string_t = "abhskdakssa"
-print(string_t[len(string_t) :1])
-print(string_t.find("a",string_t.find("a")+1 ))
-x = (string_t.replace("a", "$",3)[1:len(string_t)])
-print(string_t.)
-
-print(x)
-
 #########1#######
 print("Task_1: char -> '$' converter \n")
 check = 0
@@ -31,7 +23,7 @@ text_half = first_input_1[1 : len(first_input_1)]
 print('\nSample String: ' + first_input)
 print('Expected Result: ' + char_first + text_half)
 print("\n")
-'''
+
 ##############2###########
 print('Task_2: ing/ly\n')
 
