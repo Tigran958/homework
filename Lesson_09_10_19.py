@@ -1,3 +1,4 @@
+
 time_input = input('Enter the time in 24-our format: 00:00:00 \n')
 check_f = time_input.count(':')
 check_len = len(time_input)
