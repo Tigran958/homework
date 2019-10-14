@@ -26,7 +26,7 @@ for key in fruits.keys():
 	if fruits[key] > 5:
 		print(key)
 
-grades = {'Gor': 26, 'David': 26, 'Vardges': 26, 'rafayel': 28, 'Khachatur': 23, 'Marat': 24, 'Artur': 23, 'Sedrak': 24, 'Marianna': 25, 'Vardges D': 28, 'Tigran': 28}
+grades = {'Gor': 26, 'David': 26, 'Vardges': 26, 'Rafayel': 28, 'Khachatur': 23, 'Marat': 24, 'Artur': 23, 'Sedrak': 24, 'Marianna': 25, 'Vardges D': 28, 'Tigran': 28}
 
 print(grades)
 
