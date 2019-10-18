@@ -102,7 +102,7 @@
 # print(my_person.name.first_name)
 # print(my_person.name.last_name)
 # print(my_person.age)
-#############################
+############################
 class Name:
 	def __init__(self, first_name, last_name):
 		self.first_name = first_name
