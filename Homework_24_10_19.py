@@ -5,13 +5,13 @@
 # Then, the output should be:
 # [‘34’, ‘67’, ‘55’, ‘33’, ‘12’, ‘98’]
 # (‘34’, ‘67’, ‘55’, ‘33’, ‘12’, ‘98’)
-# numbers_input = input("Enter your numbers! ")
+numbers_input = input("Enter your numbers! ")
 
-# elements_list = numbers_input.split(",")
-# print(elements_list)
+elements_list = numbers_input.split(",")
+print(elements_list)
 
-# elements_tuple = tuple(elements_list)
-# print(elements_tuple)
+elements_tuple = tuple(elements_list)
+print(elements_tuple)
 
 
 # 2. Write a program that accepts a sequence of whitespace separated words as input and 
@@ -24,15 +24,15 @@
 words_input = input("Enter the words! ")
 list_add = []
 list_original = words_input.split(" ")
-print(list_original)
+
 list_original.sort()
-print(list_original)
+
 
 for i in list_original:
 	if i not in list_add:
 		list_add.append(i)
 
-print(list_add)
+
 string = ""
 for i in range(len(list_add)):
 	if i != 0:
