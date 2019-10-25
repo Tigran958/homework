@@ -6,9 +6,9 @@ while True:
 		for i in a:
 			if i in first_input:
 				raise
-	break
+		break
 	except:	
-		print(first_input)
+		print("Wrong")
 		
 
 list1 = [1, 2, 3, "a", 'b', 4, 9, "i", "asd", "10"]
