@@ -6,11 +6,12 @@ def caesar(b,num):
 		alpha = alpha.upper()
 	
 	ind_l = alpha.find(b)
+
 	ind_new = ind_l + num
-	
 	while ind_new >= 26:
 		ind_new -= 26
-		
+	# or we can solve in better way
+	# ind_new = (ind_l + num) % 26
 	return alpha[ind_new]	
 
 
