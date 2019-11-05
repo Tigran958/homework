@@ -62,7 +62,7 @@ while True:
 	
 	elif player < 21:
 		user_input = input("Do you want more? yes/no ")
-		while user_input == "yes":
+		while user_input != "yes":
 			player += card_gen(key_list,dict_card)
 			print(player)
 			if player == 21:
