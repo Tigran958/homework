@@ -1,0 +1,13 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'store/style.css' %}">
+<a href = "asdasdas"> sdashbbjkaksbjdajk</a>
+<ul>
+  {% for product in prod_list %}
+  
+    <img src="{{ product.image.url}}" alt="{{ product.product_name }}">
+    <li><a href = "{% url 'detail' product.id %}">{{ product.product_name }}</a></li>
+    
+  {% endfor %}
+</ul>

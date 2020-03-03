@@ -103,24 +103,57 @@
 # print(my_person.name.last_name)
 # print(my_person.age)
 ############################
-class Name:
-	def __init__(self, first_name, last_name):
-		self.first_name = first_name
-		self.last_name = last_name
+# class Name:
+# 	def __init__(self, first_name, last_name):
+# 		self.first_name = first_name
+# 		self.last_name = last_name
 
-class Person:
-	def __init__(self, name, eyecolor, age):
+# class Person:
+# 	def __init__(self, name, eyecolor, age):
+# 		self.name = name
+# 		self.eyecolor = eyecolor
+# 		self.age = age
+
+# my_name = Name("Tigran", "Danielyan")
+# my_person = Person(my_name, "Brown", 19)
+
+# def capitalize_name(name):
+# 	name.first_name = name.first_name.upper()
+# 	name.last_name = name.last_name.upper()
+
+# capitalize_name(my_name)
+# print(my_person.name.first_name)
+# print(my_person.name.last_name)
+
+class Parent:
+	def	__init__(self, name):
 		self.name = name
-		self.eyecolor = eyecolor
+
+	char = 15
+
+	def hello_world(self):
+		print("this is hello_world")
+
+	def bie_bie():
+		print("bie_bie")
+
+	def __str__(self):
+		return self.name
+
+
+class Child(Parent):
+	def __init__(self, name, age):
+		super().__init__(name)
 		self.age = age
 
-my_name = Name("Tigran", "Danielyan")
-my_person = Person(my_name, "Brown", 19)
 
-def capitalize_name(name):
-	name.first_name = name.first_name.upper()
-	name.last_name = name.last_name.upper()
 
-capitalize_name(my_name)
-print(my_person.name.first_name)
-print(my_person.name.last_name)
+
+name1 = Parent("Tigran")
+print(name1.name)
+print(name1.char)
+print(Parent.char)
+print(name1)
+Parent.bie_bie()
+Parent.hello_world("asd")
+name1.hello_world()

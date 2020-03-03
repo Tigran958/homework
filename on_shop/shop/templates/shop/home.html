@@ -1,0 +1,28 @@
+<body>
+	{% load static %}
+
+<link rel="stylesheet" href="{% static 'shop/home.css' %}">
+
+<h1 id=c1>ON Shop</h1>
+<h2>Wellcom to our online shop!!!</h2>
+<ul>
+{% if prod_t %}
+	{% for i in prod_t %}
+	
+	<li id='li'><a href="{% url 'new' i.id %}"><b>{{i.p_type}}</b></a></li>
+	
+{% endfor %}
+{% endif %}
+
+</ul>
+<br>
+<ul id='pic1_ul'>
+{% for t in prod_l %}
+	
+	<li id='pic1'><a href="{% url 'details' t.id %}"><img src="{{ t.picture.url }}" alt={{t}} ></a></li>
+	
+{% endfor %}
+</ul>
+
+<img src="{% static 'shop/wallet.jpg' %}">
+</body>

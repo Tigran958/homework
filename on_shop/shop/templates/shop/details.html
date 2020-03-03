@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'shop/home.css' %}">
+
+<h1 id= 'c1'>ON Shop</h1>
+<br>
+
+<a id='p' href="{% url 'home'%}">HOME</a>
+
+<h2></h2>
+
+<ul>
+{% if prod_t %}
+	{% for i in prod_t %}
+	
+	<li id='li'><a href="{% url 'new' i.id %}"><b>{{i.p_type}}</b></a></li>
+	
+{% endfor %}
+{% endif %}
+
+</ul>
+<br>
+<ul>
+<li ><img src="{{detail.picture.url}}"></li>
+<li >{{ detail.name }}</li>
+<br>
+<li >{{ detail.description }}</li>
+<br>
+<li >{{ detail.location }}</li>
+<br>
+<li >{{ detail.price }}</li>
+<br>
+
+</ul>
+

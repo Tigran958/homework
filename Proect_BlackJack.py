@@ -26,7 +26,9 @@ for i in card_type:
 		elif j == 14:	
 			key = "K" + " of " + i
 			dict_card[key] = j
-			key_list.append(key) 		
+			key_list.append(key) 
+
+		
 			
 player = 0
 comp = 0
@@ -47,7 +49,8 @@ def card_gen_c(nlist, ndict):
 
 print("Lets play Black Jack")
 for i in range(2):
-	player += card_gen(key_list,dict_card) 
+	# player += card_gen(key_list,dict_card)
+	player += int(input('tell test number! ')) 
 	comp += card_gen_c(key_list,dict_card) 
 
 print(F"Your start point is {player}" )
@@ -63,7 +66,8 @@ while True:
 	elif player < 21:
 		user_input = input("Do you want more? yes/no ")
 		while user_input == "yes":
-			player += card_gen(key_list,dict_card)
+			# player += card_gen(key_list,dict_card)
+			player += int(input('tell test number! '))
 			print(player)
 			if player == 21:
 				print("BLACK JACK!!! You Won!!!")

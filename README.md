@@ -1,2 +1,0 @@
-# homework
-Python-homework
